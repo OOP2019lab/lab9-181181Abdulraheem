@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Address.h"
 #include "Project.h"
+#pragma warning(disable: 4996)                    //Use to overcome the error of strcpy
 
 using namespace std;
 
@@ -10,6 +11,9 @@ class Employee
 {
 	char* emp_name; 
 	//Add Data Members here
+	Address *empadd;
+	Project ** emp_projects;
+	int noprojects;
 	
 public:
 	Employee(char* name, const Address&);
